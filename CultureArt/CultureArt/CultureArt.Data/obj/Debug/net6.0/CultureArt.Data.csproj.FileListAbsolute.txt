@@ -1,0 +1,17 @@
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Data.deps.json
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Data.runtimeconfig.json
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Data.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Data.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Core.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\bin\Debug\net6.0\CultureArt.Core.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.AssemblyInfo.cs
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.csproj.CopyComplete
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\refint\CultureArt.Data.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\CultureArt.Data.genruntimeconfig.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Data\obj\Debug\net6.0\ref\CultureArt.Data.dll

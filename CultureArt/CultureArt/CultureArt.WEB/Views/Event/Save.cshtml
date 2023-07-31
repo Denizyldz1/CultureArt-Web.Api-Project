@@ -1,0 +1,135 @@
+﻿@model CreateEventModel
+@{
+    ViewData["Title"] = "Save";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Yeni Etkinlik  Kaydı</h3>
+            <form class="forms-sample" method="post" asp-controller="Event" asp-action="Save">
+                <div class="form-group">
+                    <label for="exampleInputName1">Etkinlik Adı</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Başlık</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="EventFeature.Title">
+                    <span asp-validation-for="EventFeature.Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Açıklama</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="EventFeature.Description">
+                    <span asp-validation-for="EventFeature.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Etkinlik Kuralları</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="EventFeature.EventRules">
+                    <span asp-validation-for="EventFeature.EventRules" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Resim URL</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="ImageUrl">
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Başlangış Tarihi</label>
+                    <input type="datetime-local" class="form-control" id="exampleInputName1" asp-for="EventStartDate">
+                    <span asp-validation-for="EventStartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Bitiş Tarihi</label>
+                    <input type="datetime-local" class="form-control" id="exampleInputName1" asp-for="EventEndDate">
+                    <span asp-validation-for="EventEndDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Kategori Bilgisi</label>
+                    <select asp-for="CategoryId" asp-items="(SelectList)ViewBag.Categories" class="form-select">
+                        <option>.:: Lütfen Kategori Bilgisi Seçiniz ::.</option>
+                    </select>
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">Şehir Bilgisi</label>
+                    <select asp-for="CityId" asp-items="(SelectList)ViewBag.Cities" class="form-select" id="city_list">
+                        <option>.:: Lütfen Şehir Bilgisi Seçiniz ::.</option>
+                    </select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+                </div>
+                    <div class="form-group">
+                        <label class="form-label" asp-for="AddressDetailId">Etkinlik Alanı</label>
+                        <select asp-for="AddressDetailId" class="form-select">
+                        </select>
+                    </div>
+                <div class="form-group">
+                    <label class="form-label" asp-for="SelectedPublisherId">Yayıncılar(Bir'den fazla yayıncı seçilebilir)</label>
+                    <select asp-for="SelectedPublisherId" class="form-select" multiple>
+                  
+                        <!-- Burada Model'den "Publishers" öğelerini kullanarak dropdown içeriğini dolduruyoruz. -->
+                        @foreach (var publisher in ViewBag.Publishers)
+                        {                            
+                            <option value="@publisher.Id">@publisher.Name</option>
+                        }
+                    </select>
+                </div>
+
+                @foreach (var publisher in ViewBag.Publishers)
+                {
+                    <div class="form-group" id="urlInput-@publisher.Id" style="display: none;">
+                        <label class="form-label" for="publisherEventUrl-@publisher.Id">Event URL (@publisher.Name)</label>
+                        <input type="text" class="form-control" id="publisherEventUrl-@publisher.Id" name="PublisherEventUrls[@publisher.Id]" />
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-info me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#SelectedPublisherId').on('change', function () {
+                var selectedPublisherId = $(this).val();
+
+                // Gizli tüm inputları gizle
+                $('[id^="urlInput-"]').hide();
+
+                // Seçilen yayıncıların inputlarını göster
+                if (selectedPublisherId !== null) {
+                    for (var i = 0; i < selectedPublisherId.length; i++) {
+                        var publisherId = selectedPublisherId[i];
+                        $('#urlInput-' + publisherId).show();
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        let addressDetailsSelect = document.querySelector('#city_list');
+        addressDetailsSelect.addEventListener('change',function(){
+            $.ajax({
+                url: `/AddressDetail/GetAddressDetailsByCityId?cityId=${this.value}`,
+                method: 'get',
+                async: true,
+                success: function (addressDetails){
+                    var addressDetailSelect = document.querySelector('#AddressDetailId');
+                    addressDetailSelect.innerHTML =null;
+                    for(let addressDetail of addressDetails){
+                        let optionElement = document.createElement('option');
+                        optionElement.value = addressDetail.id;
+                        optionElement.innerText = addressDetail.eventAreaName;
+                        addressDetailSelect.appendChild(optionElement);
+                    }
+                }
+            })
+        })
+    </script>
+}
+

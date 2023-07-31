@@ -1,0 +1,17 @@
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Service.deps.json
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Service.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Service.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Core.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Data.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Core.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\bin\Debug\net6.0\CultureArt.Data.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.AssemblyInfo.cs
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.csproj.CopyComplete
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\refint\CultureArt.Service.dll
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\CultureArt.Service.pdb
+C:\Users\PC\Desktop\CultureArt\CultureArt\CultureArt.Service\obj\Debug\net6.0\ref\CultureArt.Service.dll

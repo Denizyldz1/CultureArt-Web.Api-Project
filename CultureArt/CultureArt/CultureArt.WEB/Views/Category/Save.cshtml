@@ -1,0 +1,22 @@
+﻿@model CategoryModel
+@{
+    ViewData["Title"] = "Save";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Yeni Kategori Kaydı</h3>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Kategori Adı</label>
+                    <input type="text" class="form-control" id="exampleInputName1" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-info me-2">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+
